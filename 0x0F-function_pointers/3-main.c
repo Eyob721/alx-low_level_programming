@@ -9,8 +9,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int (*operation)(int, int), a, b;
-	char *operator;
+	int (*operation)(int, int), a, b, result;
+	char operator;
 
 	/* Check if the right number of arguments are being used: Error 98*/
 	if (argc != 4)
@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 	}
 
 	a = atoi(argv[1]);
-	operator = argv[2];
+	operator = *argv[2];
 	b = atoi(argv[3]);
 
-	operation = get_op_func(operator);
+	operation = get_op_func(argv[2]);
 
 	/* If the operation is not +, -, *, / or %: Error 99 */
 	if (operation == NULL)
@@ -33,13 +33,15 @@ int main(int argc, char *argv[])
 	}
 
 	/* Check for division by 0, if the operator is / or %: Error 100*/
-	if ((*operator == '/' || *operator == '%') && b == 0)
+	if ((operator == '/' || operator == '%') && b == 0)
 	{
 		printf("Error\n");
 		return (100);
 	}
 
-	printf("%d\n", operation(a, b));
+	result = operation(a, b);
+
+	printf("%d\n", result);
 
 	return (0);
 }
