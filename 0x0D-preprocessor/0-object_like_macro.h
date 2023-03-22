@@ -3,7 +3,4 @@
 
 #define SIZE 1024
 
-/* a dummy variable to make ISO C standard happy ;) */
-typedef int make_iso_compilers_happy;
-
 #endif
