@@ -13,3 +13,7 @@
 - 2-print_strings.c
 
   - a function that prints strings, followed by a new line
+
+- 3-print_all.c
+
+  - a function that prints anything
