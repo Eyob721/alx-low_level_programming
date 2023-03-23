@@ -9,3 +9,7 @@
 - 1-print_numbers.c
 
   - print_numbers - a function that prints numbers, followed by a new line
+
+- 2-print_strings.c
+
+  - a function that prints strings, followed by a new line
