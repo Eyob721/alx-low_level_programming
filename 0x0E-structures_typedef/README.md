@@ -9,3 +9,7 @@
 - 1-init_dog.c
 
   - a function that initializes a variable of type dog.
+
+- 2-print_dog.c
+
+  - a function that prints a struct dog
