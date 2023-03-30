@@ -17,3 +17,7 @@
 - 4-new_dog.c
 
   - a function that creates a new dog.
+
+- 5-new_dog.c
+
+  - a function that frees memory allocated by dog_t type.
