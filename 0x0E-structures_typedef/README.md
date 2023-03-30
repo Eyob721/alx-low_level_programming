@@ -12,4 +12,8 @@
 
 - 2-print_dog.c
 
-  - a function that prints a struct dog
+  - a function that prints a struct dog.
+
+- 4-new_dog.c
+
+  - a function that creates a new dog.
