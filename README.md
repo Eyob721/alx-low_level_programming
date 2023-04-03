@@ -1,6 +1,6 @@
-# Alx Low Level Programming
+# Alx Low Level Programming & Algorithm
 
-## Projects
+## Hatching out
 
 - 0x00. C - Hello, World
 - 0x01. C - Variables, if, else, while
@@ -15,3 +15,7 @@
 - 0x0A. C - argc, argv
 - 0x0D. C - Preprocessor
 - 0x0E. C - Structures, typedef
+- 0x0F. C - Function pointers
+- 0x10. C - Variadic functions
+
+## Data structures and Algorithms
