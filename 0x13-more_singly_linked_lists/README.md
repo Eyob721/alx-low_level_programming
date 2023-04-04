@@ -34,3 +34,8 @@
   - a function that returns the nth node of a listint_t linked list.
   - it takes two arguments, a pointer to the head of the linked list and the index or nth node from the list.
   -it returns a pointer to the nth node, or NULL if the node doesn't exist.
+
+- 8-sum_listint.c
+  - a function that calculates the sum of all the data(n) of a listint_t linked list.
+  - it takes one argument, a pointer to head of the linked list.
+  - it returns the sum of the all the data(n) of the list.
