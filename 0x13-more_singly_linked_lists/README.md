@@ -29,3 +29,8 @@
   - a function that deletes the head node of a listint_t linked list.
   - it takes one arguments, a double pointer to the head of the linked list.
   - it returns the data (n) of the head node, 0 if the list is empty.
+
+- 7-get_nodeint.c
+  - a function that returns the nth node of a listint_t linked list.
+  - it takes two arguments, a pointer to the head of the linked list and the index or nth node from the list.
+  -it returns a pointer to the nth node, or NULL if the node doesn't exist.
