@@ -19,3 +19,5 @@
 - 0x10. C - Variadic functions
 
 ## Data structures and Algorithms
+
+- 0x12. C - Singly linked lists
