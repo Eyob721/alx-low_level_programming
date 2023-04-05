@@ -49,3 +49,8 @@
   - a function that deletes the node at index of a listint_t linked list.
   - it takes two arguments, a double pointer to the head of the linked list and the index of the node to be deleted.
   - it returns 1 if it is successful, or -1 if it failed.
+
+- 100-reverse_listint.c
+  - a function that reverses a listint_t linked list using only one loop, only two variables, and without using malloc, free or arrays.
+  - it takes one argument, a double pointer to the linked list.
+  - it returns a pointer to the reversed linked list, or NULL if it fails.
