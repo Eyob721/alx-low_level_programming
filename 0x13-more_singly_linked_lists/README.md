@@ -39,3 +39,8 @@
   - a function that calculates the sum of all the data(n) of a listint_t linked list.
   - it takes one argument, a pointer to head of the linked list.
   - it returns the sum of the all the data(n) of the list.
+
+- 9-insert_nodeint.c
+  - a function that inserts a new node at a given position.
+  - it takes three arguments, a double pointer to the head of the linked list, the index of the list where the new node should be added and the data(n) of the new node.
+  - it returns the address of the new node, or NULL if it fails.
