@@ -44,3 +44,8 @@
   - a function that inserts a new node at a given position.
   - it takes three arguments, a double pointer to the head of the linked list, the index of the list where the new node should be added and the data(n) of the new node.
   - it returns the address of the new node, or NULL if it fails.
+
+- 10-delete_nodeint.c
+  - a function that deletes the node at index of a listint_t linked list.
+  - it takes two arguments, a double pointer to the head of the linked list and the index of the node to be deleted.
+  - it returns 1 if it is successful, or -1 if it failed.
