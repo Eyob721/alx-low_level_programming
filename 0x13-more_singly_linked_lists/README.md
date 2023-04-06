@@ -54,3 +54,8 @@
   - a function that reverses a listint_t linked list using only one loop, only two variables, and without using malloc, free or arrays.
   - it takes one argument, a double pointer to the linked list.
   - it returns a pointer to the reversed linked list, or NULL if it fails.
+
+- 101-print_listint_safe.c
+  - a function that prints a listint_t linked list safely, avoiding infinite loops.
+  - it takes one argument, a pointer to the head of the linked list.
+  - it returns number of nodes printed, 98 otherwise.
