@@ -26,3 +26,8 @@
   - a function that clears the value of a bit to 0 at a given index.
   - parameters: takes two arguments, a pointer to a long integer, and an index of the bit, starting from 0.
   - returns: 1 if it worked, or -1 if an error occurred.
+
+- 5-flip_bits.c
+  - a function that returns the number of bits you would need to flip to get from one number to another.
+  - parameters: takes two arguments, the first integer and  second integer.
+  - returns: number of bits to flip.
