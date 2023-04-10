@@ -21,3 +21,8 @@
   - a function that sets the value of a bit to 1 at a given index.
   - parameters: takes two arguments, a pointer to a long integer, and an index of the bit, starting from 0.
   - returns: 1 if it worked, or -1 if an error occurred.
+
+- 4-clear_bit.c
+  - a function that clears the value of a bit to 0 at a given index.
+  - parameters: takes two arguments, a pointer to a long integer, and an index of the bit, starting from 0.
+  - returns: 1 if it worked, or -1 if an error occurred.
