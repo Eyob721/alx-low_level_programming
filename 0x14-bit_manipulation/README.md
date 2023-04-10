@@ -16,3 +16,8 @@
   - a function that returns the value of a bit at a given index.
   - parameters: takes two arguments, a long integer and an index of the bit, starting from 0.
   - returns: value of the bit at the index, or -1 if there is error.
+
+- 3-set_bit.c
+  - a function that sets the value of a bit to 1 at a given index.
+  - parameters: takes two arguments, a pointer to a long integer, and an index of the bit, starting from 0.
+  - returns: 1 if it worked, or -1 if an error occurred.
