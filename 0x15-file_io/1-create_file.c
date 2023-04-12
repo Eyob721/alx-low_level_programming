@@ -9,14 +9,15 @@
  */
 int create_file(const char *filename, const char *text_content)
 {
-	int fd, total_written;
+	int fd, total_written = 0;
 
 	if (filename == NULL)
 		return (-1);
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd == -1)
 		return (-1);
-	total_written = write(fd, text_content, strlen(text_content));
+	if (text_content != NULL)
+		total_written = write(fd, text_content, strlen(text_content));
 	if (total_written == -1)
 	{
 		close(fd);
