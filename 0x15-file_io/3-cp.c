@@ -42,10 +42,10 @@ int main(int argc, char *argv[])
 			handle_error(99, argv, -1);
 		}
 	}
-	close_status = close(fd_old) == -1;
+	close_status = close(fd_old);
 	if (close_status == -1)
 		handle_error(100, argv, fd_old);
-	close_status = close(fd_new) == -1;
+	close_status = close(fd_new);
 	if (close_status == -1)
 		handle_error(100, argv, fd_new);
 	return (0);
