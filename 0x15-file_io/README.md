@@ -16,3 +16,6 @@
   - a function that appends text at the end of a file.
   - parameters: it takes two arguments, name of the file and a text content to be written on the new file.
   - returns: 1 on success, or -1 on error.
+
+- 3-cp.c
+  - a program that copies the content of a file to another file.
