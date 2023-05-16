@@ -57,6 +57,5 @@ int main(void)
 	
 	n = print_listint_safe(head);
 	printf("%lu\n", n);
-	_free_listint_safe(&head);
 	return (0);
 }

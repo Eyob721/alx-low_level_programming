@@ -13,9 +13,10 @@ int main(void)
 	listint_t *head;
 	listint_t *head2;
 	listint_t *node;
+	int n;
 
 	head2 = NULL;
-	print_listint_safe(head2);
+	printf("No loop ---------------------\n");
 	add_nodeint(&head2, 0);
 	add_nodeint(&head2, 1);
 	add_nodeint(&head2, 2);
@@ -24,16 +25,24 @@ int main(void)
 	add_nodeint(&head2, 98);
 	add_nodeint(&head2, 402);
 	add_nodeint(&head2, 1024);
-	print_listint_safe(head2);
+	/* 
+	*/
+	n = print_listint_safe(head2);
+	printf("%d\n", n);
 	head = NULL;
+	printf("With loop ---------------------\n");
 	node = add_nodeint(&head, 0);
+	/* node->next = node; */
 	add_nodeint(&head, 1);
 	add_nodeint(&head, 2);
 	add_nodeint(&head, 3);
 	add_nodeint(&head, 4);
 	node->next = add_nodeint(&head, 98);
 	add_nodeint(&head, 402);
-	add_nodeint(&head, 1024);
-	print_listint_safe(head);
+	add_nodeint(&head, 1024);	
+	/*
+	*/
+	n = print_listint_safe(head);
+	printf("%d\n", n);
 	return (0);
 }

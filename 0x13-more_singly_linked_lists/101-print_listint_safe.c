@@ -10,18 +10,41 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t no_of_nodes = 0;
+	listint_t *slow, *fast, *ptr;
 
-	while (head != NULL)
+	if (head == NULL)
+		return (0);
+	ptr = slow = fast = (listint_t *)head;
+	while (fast && fast->next)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
+		printf("[%p] %d\n", (void *)ptr, ptr->n);
 		no_of_nodes++;
-		if (head != NULL && head->next >= head)
-		{
-			head = head->next;
-			printf("-> [%p] %d\n", (void *)head, head->n);
+		ptr = slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
 			break;
-		}
-		head = head->next;
 	}
+	if (!fast || !fast->next) /* No infinite loop */
+	{
+		while (ptr)
+		{
+			printf("[%p] %d\n", (void *)ptr, ptr->n);
+			no_of_nodes++;
+			ptr = ptr->next;
+		}
+		return (no_of_nodes);
+	}
+	/* Find repeating node */
+	for (slow = (listint_t *)head; slow != fast; slow = slow->next)
+		fast = fast->next;
+	while (ptr != head)
+	{
+		printf("[%p] %d\n", (void *)ptr, ptr->n);
+		no_of_nodes++;
+		ptr = ptr->next;
+		if (ptr == slow)
+			break;
+	}
+	printf("-> [%p] %d\n", (void *)ptr, ptr->n); /* repeat node */
 	return (no_of_nodes);
 }
