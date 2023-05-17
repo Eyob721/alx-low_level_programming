@@ -59,3 +59,8 @@
   - a function that prints a listint_t linked list safely, avoiding infinite loops.
   - it takes one argument, a pointer to the head of the linked list.
   - it returns number of nodes printed, 98 otherwise.
+
+- 102-free_listint_safe.c
+  - a function that frees a listint_t linked list safely, avoiding infinite loops.
+  - it takes one argument, a double pointer to the head of the linked list.
+  - it returns size of the list freed.
