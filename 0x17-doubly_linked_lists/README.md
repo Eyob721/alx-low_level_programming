@@ -34,8 +34,14 @@
 
 5-get_dnodeint_at_index.c
 
-- returns the nth node of a dlistint_t linked list
+- a function that returns the nth node of a dlistint_t linked list
 - parameters(2): pointer to the head of the linked list, and index of the node to be returned
 - returns: nth node, or NULL otherwise
+
+6-sum_dlistint.c
+
+- a function that returns the sum of all the data(n) of a dlistint_t list
+- parameters(1): @head: pointer to the head of the linked list
+- returns: sum of all the data in the list
 
 ## Advanced
