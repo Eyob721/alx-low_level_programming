@@ -32,4 +32,10 @@
 - parameters(1): a pointer to the head of the list
 - returns: void
 
+5-get_dnodeint_at_index.c
+
+- returns the nth node of a dlistint_t linked list
+- parameters(2): pointer to the head of the linked list, and index of the node to be returned
+- returns: nth node, or NULL otherwise
+
 ## Advanced
