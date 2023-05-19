@@ -44,4 +44,10 @@
 - parameters(1): @head: pointer to the head of the linked list
 - returns: sum of all the data in the list
 
+7-insert_dnodeint_at_index
+
+- inserts a new node at a given position
+- parameters(3): a double pointer to head of a dlistint_t list, index of the new node, and data of the new node
+- returns: address of the new node, or NULL if it fails
+
 ## Advanced
