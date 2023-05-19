@@ -17,7 +17,13 @@
 2-add_dnodeint.c
 
 - adds a new node at the beginning of a dlistint_t list
-- parameters(2): double pointer to the head of the list, and data of the new node
-- returns: address of the new node
+- parameters(2): a double pointer to the head of the list, and data of the new node
+- returns: address of the new node, or NULL if it fails
+
+3-add_dnodeint_end.c
+
+- adds a new node at the end of a dlistint_t list
+- parameters(2): a double pointer to the head of the list, and a data of the new node
+- returns: address of the new node, or NULL if it fails
 
 ## Advanced
