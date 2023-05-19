@@ -50,4 +50,10 @@
 - parameters(3): a double pointer to head of a dlistint_t list, index of the new node, and data of the new node
 - returns: address of the new node, or NULL if it fails
 
+8-delete_dnodeint_at_index.c
+
+- a function that deletes the node at index of a dlistint_t list
+- parameters(2): a double pointer to the head of the list, and the index of the node that should be deleted
+- returns: 1 if it succeeded, -1 if it failed
+
 ## Advanced
