@@ -1,12 +1,8 @@
-# 0x18. C - Dynamic libraries
+#ifndef MAIN_H
+#define MAIN_H
 
-## Mandatory
+#include <stdlib.h>
 
-libdynamic.so
-
-- a dynamic library that contains all of the functions listed below:
-
-```c
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -27,6 +23,5 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-```
 
-## Advanced
+#endif
