@@ -12,3 +12,5 @@
   - returns the factorial of a given number, using recursion.
 - 4-pow_recursion.c
   - returns the value of a given number raised to some power, using recursion. Similar to the function <i>pow</i>.
+- 5-sqrt_recursion.c
+  - returns the natural square root of a given number, using recursion. Similar to the function <i>sqrt</i>.
