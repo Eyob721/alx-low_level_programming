@@ -10,3 +10,5 @@
   - returns the length of a string, similar to the function strlen, using recursion.
 - 3-factorial.c
   - returns the factorial of a given number, using recursion.
+- 4-pow_recursion.c
+  - returns the value of a given number raised to some power, using recursion. Similar to the function <i>pow</i>.
