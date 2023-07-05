@@ -8,3 +8,5 @@
   - prints a string in reverse.
 - 2-strlen_recursion.c
   - returns the length of a string, similar to the function strlen, using recursion.
+- 3-factorial.c
+  - returns the factorial of a given number, using recursion.
