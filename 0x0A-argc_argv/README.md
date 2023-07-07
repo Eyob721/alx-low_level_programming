@@ -6,3 +6,7 @@
 
 - A program that prints its name, followed by a new line.
 - If you rename the program, it will print the new name, without having to compile it again
+
+1-args.c
+
+- a program that prints the number of arguments passed into it.
