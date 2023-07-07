@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - a program that prints the number of arguments passed into it
+ * main - a program that multiplies two numbers
  * @ac: argument count
  * @av: argument vector
  *
@@ -9,7 +9,11 @@
  */
 int main(int ac, char **av)
 {
-	(void)av;
-	printf("%d\n", ac - 1);
+	if (ac != 3)
+	{
+		puts("Error");
+		return (1);
+	}
+	printf("%d\n", atoi(av[1]) * atoi(av[2]));
 	return (0);
 }

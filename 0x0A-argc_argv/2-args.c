@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - a program that prints its name
+ * main - a program that prints all arguments it receives.
  * @ac: argument count
  * @av: argument vector
  *
