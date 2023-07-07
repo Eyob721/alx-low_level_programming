@@ -26,3 +26,13 @@
 - a program that adds positive numbers
 - if no number is passed to the program it prints 0, followed by a new line
 - if one of the arguments is not a number, it prints "Error", followed by a new line
+
+## Advanced
+
+100-change.c
+
+- a program that prints the minimum number of coins to make change for an amount of money
+- Usage: ./change cents
+- if the number of arguments passed to it is not 1, it will print "Error", followed by a new line
+- if the number passed to it is negative, it will print 0
+- A unlimited number of coins of values 25, 10, 5, 2, and 1 cent is used
