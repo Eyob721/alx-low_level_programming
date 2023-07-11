@@ -14,3 +14,7 @@
 2-str_concat.c
 
 - a function that concatenates two strings
+
+3-alloc_grid.c
+
+- a function that returns a pointer to a 2 dimensional array of integers
