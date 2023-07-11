@@ -12,8 +12,9 @@
 - 0x07. C - Even more pointers, arrays and strings
 - 0x08. C - Recursion
 - 0x09. C - Static libraries
-
 - 0x0A. C - argc, argv
+- 0x0B. C - malloc, free
+
 - 0x0D. C - Preprocessor
 - 0x0E. C - Structures, typedef
 - 0x0F. C - Function pointers

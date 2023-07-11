@@ -38,11 +38,12 @@ char **strtow(char *str)
 				free(str_arr);
 				return (NULL);
 			}
+			i++;
+			/* Move the pointer forward */
 			while (*str != ' ' && *str != '\0')
 				str++;
 			if (*str == ' ')
 				state = 0; /* go to SPACE State */
-			i++;
 			break;
 		}
 	str_arr[i] = NULL;

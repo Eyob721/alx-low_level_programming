@@ -28,6 +28,7 @@ int main(void)
 	char **tab;
 	int i = 0;
 
+	printf("Test 1\n-----------------------------------\n");
 	tab = strtow("      ALX School         #cisfun      ");
 	if (tab == NULL)
 	{
@@ -40,13 +41,13 @@ int main(void)
 		free(tab[i]);
 	free(tab);
 
+	printf("Test 2\n-----------------------------------\n");
 	tab = strtow("                           ");
 	if (tab == NULL)
 	{
 		printf("Failed\n");
 		return (1);
 	}
-	print_tab(tab);
 
 	return (0);
 }
