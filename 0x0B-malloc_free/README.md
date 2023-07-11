@@ -22,3 +22,9 @@
 4-free_grid.c
 
 - a function that frees a 2 dimensional grid previously made by the alloc_grid function
+
+## Advanced
+
+100-argstostr.c
+
+- a function that concatenates all the arguments of your program
