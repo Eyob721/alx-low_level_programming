@@ -8,5 +8,9 @@
 
 1-strdup.c
 
-- a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter.
+- a function that returns a pointer to a newly allocated space in memory, which contains a copy of the string given as a parameter
 - an implementation of strdup function
+
+2-str_concat.c
+
+- a function that concatenates two strings
