@@ -18,3 +18,7 @@
 3-alloc_grid.c
 
 - a function that returns a pointer to a 2 dimensional array of integers
+
+4-free_grid.c
+
+- a function that frees a 2 dimensional grid previously made by the alloc_grid function
