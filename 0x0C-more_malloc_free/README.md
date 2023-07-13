@@ -15,3 +15,7 @@
 2-calloc.c
 
 - a function that allocates memory for an array of `nmemb` elements of `size` bytes each and returns a pointer to the allocated memory.
+
+3-array_range.c
+
+- a function that creates an array of integers
