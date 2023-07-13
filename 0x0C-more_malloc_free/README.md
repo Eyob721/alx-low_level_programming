@@ -19,3 +19,13 @@
 3-array_range.c
 
 - a function that creates an array of integers
+
+## Advanced
+
+100-realloc.c
+
+- a function that reallocates a memory block using malloc and free
+- newly allocated memory is initialized to prevent memory errors.
+- contents of the old memory (ptr) is copied to the new memory.
+- if ptr is NULL, and new_size is 0, then the call is equivalent to free(ptr). Return NULL.
+- if ptr is NULL, and new_size if not 0, then the call is equivalent to malloc(new_size).
