@@ -29,3 +29,8 @@
 - contents of the old memory (ptr) is copied to the new memory.
 - if ptr is NULL, and new_size is 0, then the call is equivalent to free(ptr). Return NULL.
 - if ptr is NULL, and new_size if not 0, then the call is equivalent to malloc(new_size).
+
+101-mul.c
+
+- a program that multiplies two positive numbers.
+- Usage: mul num1 num2
