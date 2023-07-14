@@ -17,7 +17,7 @@ int _is_number(char *s);
 int main(int ac, char **av)
 {
 	int digits_prdt, digit1, digit2, carry, len1, len2, i, j, k, idx;
-	char *prdt_buf, *ptr;
+	char *prdt_buf, *prdt;
 
 	if (ac != 3)
 	{
@@ -55,11 +55,14 @@ int main(int ac, char **av)
 		idx--;
 	}
 	prdt_buf[len1 + len2] = '\0';
-	ptr = prdt_buf;
-	for (i = 0; prdt_buf[i] == '0'; i++)
-		prdt_buf++;
-	printf("%s\n", prdt_buf);
-	free(ptr);
+	prdt = prdt_buf;
+	for (i = 0; prdt_buf[i] == '0' && prdt_buf[i] != '\0'; i++)
+		prdt++;
+	if (prdt_buf[i] == '\0')
+		printf("%s\n", "0");
+	else
+		printf("%s\n", prdt);
+	free(prdt_buf);
 	return (0);
 }
 
