@@ -14,5 +14,11 @@ int main(void)
 	str = "My first strlen!";
 	len = _strlen(str);
 	printf("%d\n", len);
+	str = "";
+	len = _strlen(str);
+	printf("%d\n", len);
+	str = NULL;
+	len = _strlen(str);
+	printf("%d\n", len);
 	return (0);
 }
