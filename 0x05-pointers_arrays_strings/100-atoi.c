@@ -1,5 +1,6 @@
 #include "main.h"
 
+int _isdigit(char c);
 /**
  * _atoi - converts a string into an integer
  * @s: a string
@@ -8,19 +9,41 @@
  */
 int _atoi(char *s)
 {
-	unsigned int i, j, sign = 1, num = 0;
+	unsigned int i, sign = 1, num = 0;
 
+	if (s == NULL)
+		return (0);
+	/**
+	 * Search for a number in the string
+	 * Look for negative signs along the way
+	 */
 	for (i = 0; s[i] != '\0'; i++)
 		if (s[i] == '-')
 			sign *= -1;
-		else if (s[i] > 47 && s[i] < 58)
+		else if (_isdigit(s[i]))
 			break;
 	/* If there are no numbers return 0 */
 	if (s[i] == '\0')
-		return (num);
+		return (0);
 	/* If there are numbers then return the number */
-	for (j = i; s[j] > 47 && s[j] < 58; j++)
-		num = (s[j] - '0') + num * 10;
+	while (_isdigit(s[i]))
+		num = (s[i++] - '0') + num * 10;
+	/**
+	 * NOTE: unsigned type is used to prevent errors for INT_MIN (-214748360)
+	 * When INT_MIN is used, in the above loop the last expression will be
+	 * 2147483640 + 8 -> which will cause overflow
+	 */
 	return (num * sign);
+}
+
+/**
+ * _isdigit - a function that checks if a character is a digit (base 10)
+ * @c: character to be checked
+ *
+ * Return: 1 if c is a digit, 0 if it is not
+ */
+int _isdigit(char c)
+{
+	return (c > 47 && c < 58);
 }
 
