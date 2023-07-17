@@ -18,5 +18,11 @@ int main(void)
 	printf("%s", s1);
 	printf("%s", s2);
 	printf("%s", ptr);
+	ptr = _strcat(NULL, s2);
+	printf("%s", ptr);
+	ptr = _strcat(s1, NULL);
+	printf("%s", ptr);
+	ptr = _strcat(NULL, NULL);
+	printf("%s", ptr);
 	return (0);
 }
