@@ -9,19 +9,21 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
-
-	for (i = 0; s[i] != '\0' && s[i] != c; i++)
-		;
-
-	/**
-	 * If c is not found return NULL
-	 * But if c is also NULL,
-	 * then return a pointer to the NULL character in the string
-	 */
-	if (c != '\0' && s[i] == '\0')
-		return ('\0');
-
-	/* If c is found return the address of the character */
-	return (&s[i]);
+	if (s != NULL)
+	{
+		while (*s != '\0')
+		{
+			if (*s == c)
+				return (s);
+			s++;
+		}
+		/**
+		 * If `c` is also '\0',
+		 * then return a pointer to the '\0' character in the string
+		 */
+		if (c == '\0')
+			return (s);
+	}
+	return ('\0');
 }
+
