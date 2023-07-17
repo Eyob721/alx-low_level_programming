@@ -21,3 +21,7 @@ following elements:
 4-new_dog.h
 
 - a function that makes a new dog
+
+5-free_dog.c
+
+- a function that frees a dog
