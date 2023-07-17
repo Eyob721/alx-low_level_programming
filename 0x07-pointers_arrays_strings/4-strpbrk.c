@@ -10,15 +10,22 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j, found = 0;
+	char chr, *a = accept;
 
-	for (i = 0; s[i] != '\0' && !found; i++)
-		for (j = 0; accept[j] != '\0' && !found; j++)
-			if (s[i] == accept[j])
-				found = 1;
-	i--;
-	if (s[i] != '\0' && found)
-		return (&s[i]);
-
+	if (s != NULL && accept != NULL)
+	{
+		/* Check if a character from the string `s` is in `accept` */
+		while (*s != '\0')
+		{
+			chr = *s;
+			while (*a != '\0')
+				if (chr == *(a++))
+					return (s);
+			/* Move to the next character in `s` */
+			s++;
+			/* Move `a` back to the begnning of `accept` */
+			a = accept;
+		}
+	}
 	return ('\0');
 }
