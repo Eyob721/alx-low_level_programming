@@ -17,3 +17,7 @@ following elements:
 2-print_dog.c
 
 - a function that prints a struct dog.
+
+4-new_dog.h
+
+- a function that makes a new dog
