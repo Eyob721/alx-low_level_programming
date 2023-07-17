@@ -10,15 +10,24 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j, count = 0;
+	unsigned int count = 0;
+	char *a = accept;
 
-	for (i = 0; s[i] != '\0' && s[i] != ' '; i++)
-		for (j = 0; accept[j] != '\0'; j++)
-			if (s[i] == accept[j])
-			{
-				count++;
-				break;
-			}
-
+	if (s != NULL && accept != NULL)
+		while (*s != '\0' && *s != ' ')
+		{
+			/* Check if a character from the string `s` is in `accept` */
+			while (*a != '\0')
+				if (*s == *(a++))
+				{
+					count++;
+					break;
+				}
+			/* Move to the next character in `s` */
+			s++;
+			/* Move back `a` to the begnning of `accept` */
+			a = accept;
+		}
 	return (count);
 }
+
