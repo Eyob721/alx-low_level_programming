@@ -10,3 +10,7 @@
 
 - a function that executes a function given as a parameter on each element of
 an array.
+
+3-int_index.c
+
+- a function that searches for an integer.
