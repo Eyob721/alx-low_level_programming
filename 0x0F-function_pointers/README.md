@@ -18,3 +18,9 @@ an array.
 3-calc.h / 3-op_functions.c / 3-get_op_func.c / 3-main.c
 
 - a program that performs simple arithemtic operations, on integers only.
+
+## Advanced
+
+100-main_opcodes.c
+
+- a program that prints the opcodes of its own main function.
