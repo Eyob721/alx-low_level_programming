@@ -14,3 +14,7 @@ an array.
 3-int_index.c
 
 - a function that searches for an integer.
+
+3-calc.h / 3-op_functions.c / 3-get_op_func.c / 3-main.c
+
+- a program that performs simple arithemtic operations, on integers only.
