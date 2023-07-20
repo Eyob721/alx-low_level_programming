@@ -18,7 +18,6 @@
 - 0x0D. C - Preprocessor
 - 0x0E. C - Structures, typedef
 - 0x0F. C - Function pointers
-
 - 0x10. C - Variadic functions
 
 ## Data structures and Algorithms
