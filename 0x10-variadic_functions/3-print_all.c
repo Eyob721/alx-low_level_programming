@@ -18,85 +18,38 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j;
+	int i = 0, is_valid_type;
 	va_list args;
-	fmt_t fmt_hndl[] = {
-		{'c', handle_char},
-		{'i', handle_integer},
-		{'f', handle_float},
-		{'s', handle_string},
-		{'\0', NULL}
-	};
+	char *str;
 
 	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		j = 0;
-		while (fmt_hndl[j].type != '\0')
+		is_valid_type = 1;
+		switch (format[i])
 		{
-			if (format[i] == fmt_hndl[j].type)
-			{
-				fmt_hndl[j].handle(args);
-				break;
-			}
-			j++;
+		case 'c':
+			putchar(va_arg(args, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(args, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(args, double));
+			break;
+		case 's':
+			str = va_arg(args, char *);
+			if (str == NULL)
+				str = "(nil)";
+			printf("%s", str);
+			break;
+		default:
+			is_valid_type = 0;
 		}
 		i++;
-		if (fmt_hndl[j].type != '\0' && format[i] != '\0')
+		if (is_valid_type && format[i] != '\0')
 			printf(", ");
 	}
 	putchar('\n');
 	va_end(args);
 }
-
-/**
- * handle_char - handles printing char type arguments
- * @args: pointer to the next argument
- *
- * Return: void
- */
-void handle_char(va_list args)
-{
-	/* NOTE: You can't use char, because it will be promoted to int */
-	putchar(va_arg(args, int));
-}
-
-/**
- * handle_integer - handles printing integer type arguments
- * @args: pointer to the next argument
- *
- * Return: void
- */
-void handle_integer(va_list args)
-{
-	printf("%d", va_arg(args, int));
-}
-
-/**
- * handle_float - handles printing float type arguments
- * @args: pointer to the next argument
- *
- * Return: void
- */
-void handle_float(va_list args)
-{
-	/* NOTE: You can't use float, because it will be promoted to double */
-	printf("%f", va_arg(args, double));
-}
-
-/**
- * handle_string - handles printing string type arguments
- * @args: pointer to the next argument
- *
- * Return: void
- */
-void handle_string(va_list args)
-{
-	char *str = va_arg(args, char *);
-
-	if (str == NULL)
-		printf("%s", "(nil)");
-	else
-		printf("%s", str);
-}
-
