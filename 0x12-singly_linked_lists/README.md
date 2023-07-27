@@ -21,3 +21,9 @@
 4-free_list.c
 
 - a function that free a list_t list.
+
+## Advanced
+
+100-first.c
+
+- a function that prints a string before main is executed.
