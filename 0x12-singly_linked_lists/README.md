@@ -27,3 +27,7 @@
 100-first.c
 
 - a function that prints a string before main is executed.
+
+101-hello_holberton.asm
+
+- a 64-bit program in assembly that prints 'Hello, Holberton', followed by a new line.
