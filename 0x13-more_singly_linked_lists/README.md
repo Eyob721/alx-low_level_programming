@@ -63,3 +63,8 @@
 
 - a function that frees a listint_t linked list safelty, meaning it can free
   lists with a loop.
+
+103-find_listint_loop.c
+
+-  a function that finds a loop in a listint_t list, and returns the address of
+   the node where the loop starts.
