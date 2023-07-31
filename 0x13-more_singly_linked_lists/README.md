@@ -22,7 +22,16 @@
 
 - a function that frees a listint_t list.
 
-5-pop_listint.c
+5-free_listint2.c
+
+- a function that frees a listint_t list, and sets the head to NULL.
+
+6-pop_listint.c
 
 - a function that deletes the head node of a listint_t linked list, and returns
   the head node’s data (n).
+
+7-get_nodeint.c
+
+- a function that returns the nth node of a listint_t linked list.
+- returns NULL, if the node doesn't exist
