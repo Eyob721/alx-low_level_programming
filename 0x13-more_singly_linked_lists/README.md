@@ -43,3 +43,7 @@
 9-insert_nodeint.c
 
 - a function that inserts a new node at a given position.
+
+10-delete_nodeint.c
+
+- a function that deletes a node at a given position.
