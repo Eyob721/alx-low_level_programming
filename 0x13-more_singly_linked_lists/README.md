@@ -47,3 +47,9 @@
 10-delete_nodeint.c
 
 - a function that deletes a node at a given position.
+
+## Advanced
+
+100-reverse_listint.c
+
+- a function that reverses a listint_t linked list.
