@@ -25,7 +25,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int idx)
 	if (cur == NULL)
 		return (-1);
 	/* Link the previous node to the node after the current node */
-	if (prev == *head)
+	if (cur == *head)
 		*head = cur->next;
 	else
 		prev->next = cur->next;
