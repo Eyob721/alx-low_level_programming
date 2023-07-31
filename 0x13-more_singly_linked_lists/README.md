@@ -13,3 +13,7 @@
 2-add_nodeint.c
 
 - a function that adds a new node at the beginning of a listint_t list.
+
+3-add_nodeint_end.c
+
+- a function that adds a new node at the end of a listint_t list.
