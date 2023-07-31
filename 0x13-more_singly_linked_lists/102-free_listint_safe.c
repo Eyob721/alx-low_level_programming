@@ -42,6 +42,5 @@ size_t free_listint_safe(listint_t **h)
 		free(prev);
 		++freed_size;
 	}
-	*h = NULL;
 	return (freed_size);
 }
