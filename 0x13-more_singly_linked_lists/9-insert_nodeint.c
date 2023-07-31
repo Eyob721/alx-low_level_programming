@@ -32,7 +32,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	new_node->n = n;
 	/* Insert the new node before 'cur' and after 'prev' */
 	new_node->next = cur;
-	if (prev == *head)
+	if (cur == *head)
 		*head = new_node;
 	else
 		prev->next = new_node;
