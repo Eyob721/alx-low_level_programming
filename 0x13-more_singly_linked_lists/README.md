@@ -58,3 +58,8 @@
 
 - a function that prints a listint_t linked list safelty, meaning it can print
   lists with a loop.
+
+102-free_listint_safe.c
+
+- a function that frees a listint_t linked list safelty, meaning it can free
+  lists with a loop.
