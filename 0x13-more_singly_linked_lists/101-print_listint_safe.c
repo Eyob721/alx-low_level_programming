@@ -60,8 +60,11 @@ listint_t *find_loop(listint_t *head)
 		if (slow == fast)
 			break;
 	}
-	/* If 'fast' is NULL, there is no loop */
-	if (fast == NULL)
+	/**
+	 * If 'fast' is NULL, or for lists with only one node,
+	 * if 'fast->next' is NULL, there is no loop
+	 */
+	if (fast == NULL || fast->next == NULL)
 		return (NULL);
 	/* If there is a loop, find the starting point */
 	slow = (listint_t *)head;

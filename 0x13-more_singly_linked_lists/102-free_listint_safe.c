@@ -9,9 +9,9 @@
 size_t free_listint_safe(listint_t **h)
 {
 	int freed_size = 0;
-	listint_t *slow, *fast;
+	listint_t *slow, *fast, *prev;
 
-	if (h == NULL)
+	if (h == NULL || *h == NULL)
 		return (0);
 	/* Check if the list has a loop */
 	slow = fast = *h;
@@ -23,22 +23,23 @@ size_t free_listint_safe(listint_t **h)
 			break;
 	}
 	/* If there is a loop, break it */
-	if (fast != NULL)
+	if (!(fast == NULL || fast->next == NULL))
 	{
 		slow = *h;
-		while (fast->next != slow->next)
+		while (slow != fast)
 		{
+			prev = fast;
 			slow = slow->next;
 			fast = fast->next;
 		}
-		fast->next = NULL;
+		prev->next = NULL;
 	}
 	/* Now free the list */
 	while (*h != NULL)
 	{
-		fast = *h;
+		prev = *h;
 		*h = (*h)->next;
-		free(fast);
+		free(prev);
 		++freed_size;
 	}
 	*h = NULL;
