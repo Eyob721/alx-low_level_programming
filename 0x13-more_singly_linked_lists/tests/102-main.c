@@ -13,16 +13,17 @@ int main(void)
     listint_t *head;
     listint_t *head2;
     listint_t *node;
+	int freed;
 
     head2 = NULL;
     add_nodeint(&head2, 0);
     add_nodeint(&head2, 1);
-    add_nodeint(&head2, 2);
-    add_nodeint(&head2, 3);
-    add_nodeint(&head2, 4);
-    add_nodeint(&head2, 98);
-    add_nodeint(&head2, 402);
-    add_nodeint(&head2, 1024);
+    /* add_nodeint(&head2, 2); */
+    /* add_nodeint(&head2, 3); */
+    /* add_nodeint(&head2, 4); */
+    /* add_nodeint(&head2, 98); */
+    /* add_nodeint(&head2, 402); */
+    /* add_nodeint(&head2, 1024); */
     print_listint_safe(head2);
 
     head = NULL;
@@ -37,7 +38,8 @@ int main(void)
     print_listint_safe(head);
 
     free_listint_safe(&head2);
-    free_listint_safe(&head);
+    freed = free_listint_safe(&head);
+	printf("Freed: %d\n", freed);
     printf("%p, %p\n", (void *)head2, (void *)head);
     return (0);
 }

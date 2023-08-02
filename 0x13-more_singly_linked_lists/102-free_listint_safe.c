@@ -1,5 +1,6 @@
 #include "lists.h"
 
+listint_t *find_loop(listint_t *head);
 /**
  * free_listint_safe - frees a listint_t list safely, even those with a loop
  * @h: double pointer to the head of the list
@@ -8,38 +9,32 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	int freed_size = 0;
-	listint_t *slow, *fast, *prev;
+	int freed_size = 0, occurrence = 1;
+	listint_t *loop_node, *prev, *cur;
 
 	if (h == NULL || *h == NULL)
 		return (0);
 	/* Check if the list has a loop */
-	slow = fast = *h;
-	while (slow != NULL && fast != NULL && fast->next != NULL)
-	{
-		slow = slow->next;
-		fast = (fast->next)->next;
-		if (slow == fast)
-			break;
-	}
+	loop_node = find_loop(*h);
 	/* If there is a loop, break it */
-	if (!(fast == NULL || fast->next == NULL))
+	if (loop_node != NULL)
 	{
-		slow = *h;
-		while (slow != fast)
+		prev = cur = *h;
+		while (cur != loop_node || occurrence < 2)
 		{
-			prev = fast;
-			slow = slow->next;
-			fast = fast->next;
+			if (cur == loop_node)
+				++occurrence;
+			prev = cur;
+			cur = cur->next;
 		}
 		prev->next = NULL;
 	}
 	/* Now free the list */
 	while (*h != NULL)
 	{
-		prev = *h;
+		cur = *h;
 		*h = (*h)->next;
-		free(prev);
+		free(cur);
 		++freed_size;
 	}
 	return (freed_size);
