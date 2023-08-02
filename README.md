@@ -24,5 +24,4 @@
 ## Data structures and Algorithms
 
 - 0x12. C - Singly linked lists
-
 - 0x13. C - More singly linked lists
