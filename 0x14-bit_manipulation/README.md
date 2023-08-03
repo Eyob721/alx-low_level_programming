@@ -10,6 +10,10 @@
 
 - a function that prints the binary representation of a number.
 
-3-get_bit.c
+2-get_bit.c
 
 - a function that returns the value of a bit at a given index.
+
+3-set_bit.c
+
+- a function that sets the value of a bit to 1 at a given index.
