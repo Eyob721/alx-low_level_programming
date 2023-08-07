@@ -4,6 +4,12 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+/* Constant Macros */
+#define OPEN_ERR -1
+#define RDWR_EOF 0
+#define RDWR_ERR -1
+
 int _putchar(char c);
+ssize_t read_textfile(const char *filename, size_t letters);
 
 #endif
