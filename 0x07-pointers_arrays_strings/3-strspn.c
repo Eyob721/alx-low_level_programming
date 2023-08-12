@@ -11,17 +11,16 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int count = 0;
-	char chr, *a = accept;
+	char *a = accept;
 
 	if (s != NULL && accept != NULL)
 	{
 		while (*s != '\0' && *s != ' ')
 		{
 			/* Check if a character from the string `s` is in `accept` */
-			chr = *s;
 			while (*a != '\0')
 			{
-				if (s == *(a++))
+				if (*s == *(a++))
 				{
 					count++;
 					break;

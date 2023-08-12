@@ -10,16 +10,15 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	char chr, *a = accept;
+	char *a = accept;
 
 	if (s != NULL && accept != NULL)
 	{
 		/* Check if a character from the string `s` is in `accept` */
 		while (*s != '\0')
 		{
-			chr = *s;
 			while (*a != '\0')
-				if (chr == *(a++))
+				if (*s == *(a++))
 					return (s);
 			/* Move to the next character in `s` */
 			s++;
@@ -27,5 +26,5 @@ char *_strpbrk(char *s, char *accept)
 			a = accept;
 		}
 	}
-	return ('\0');
+	return (NULL);
 }
