@@ -26,3 +26,4 @@
 
 - 0x12. C - Singly linked lists
 - 0x13. C - More singly linked lists
+- [0x17. C - Doubly linked lists](./0x17-doubly_linked_lists)
