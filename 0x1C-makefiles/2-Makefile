@@ -1,0 +1,8 @@
+CC = gcc
+SRC = main.c school.c
+OBJ = $(patsubst %.c,%.o,$(SRC))
+NAME = school
+
+# Implicitly make %.o objects from %.c files
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
