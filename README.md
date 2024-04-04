@@ -21,11 +21,12 @@
 - [0x10. C - Variadic functions](./0x10-variadic_functions)
 - [0x11. C - printf](https://github.com/eyob721/printf)
 - [0x14. C - Bit manipulation](./0x14-bit_manipulation)
+- [0x18. C - Dynamic libraries](./0x18-dynamic_libraries)
+- [0x1C. C - Makefiles](./0x1C-makefiles)
 
 ## Data structures and Algorithms
 
 - [0x12. C - Singly linked lists](./0x12-singly_linked_lists)
 - [0x13. C - More singly linked lists](./0x13-more_singly_linked_lists)
 - [0x17. C - Doubly linked lists](./0x17-doubly_linked_lists)
-- [0x18. C - Dynamic libraries](./0x18-dynamic_libraries)
 - [0x1A. C - Hash tables](./0x1A-hash_tables)
